@@ -1,0 +1,111 @@
+@import "./fonts";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', medium;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+}
+
+#particles-js {
+    grid-area: 1 / 1 / 4 / 4;
+    background-color: #181417;
+    height: 100vh;
+}
+
+#logo {
+    grid-area: 2 / 2 / 3 / 3;
+    align-content: center;
+    display: grid;
+    grid-template-columns: .75fr 1fr .75fr;
+    grid-template-rows: 2fr 2px .75fr 2px .5fr 2fr;
+    .name {
+        z-index: 1;
+        grid-area: 3 / 2 / 4 / 3;
+        font-size: 4vh;
+        justify-self: center;
+        align-self: center;
+        color: white;
+    }
+    #line-top {
+        z-index: 1;
+        background-color: white;
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    #line-bot {
+        z-index: 1;
+        background-color: white;
+        grid-area: 4 / 2 / 5 / 3;
+    }
+}
+
+#icons {
+    z-index: 1;
+    grid-area: 5 / 2 / 6 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 4vh;
+    align-content: center;
+    justify-items: center;
+    a {
+        color: white;
+    }
+}
+
+#icons a {
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: justify-content 1s;
+    font-size: 4vh;
+    p {
+        font-size: 0vh;
+        transition: font-size 1s;
+    }
+}
+
+#icons a:hover{
+    font-size: 2.5vh;
+    color: #63d1c4;
+    animation: icons 0.5s ease;
+    p {
+        animation: texts 0.5s ease;
+        font-size: 2.5vh;
+    }
+}
+
+@keyframes texts {
+    0% {font-size: 0vh;}
+    75% {font-size: 0vh;}
+    to {font-size: 2.5vh;}
+}
+
+@keyframes icons{
+    0% {font-size: 4vh; opacity: 1;}
+    75% {font-size: 1vh; opacity: 0;}
+    to {font-size: 2.5vh; opacity: 1;}
+}
+
+@media (max-width: 720px) {
+    #logo {
+        grid-template-columns: .25fr 1fr .25fr;
+        grid-template-rows: 2fr 2px .75fr 2px .5fr 2fr;
+    }
+}
+
+@media (min-width: 1080px) {
+    #logo {
+        .name {
+            font-size: 5vh;
+        }
+    }
+}

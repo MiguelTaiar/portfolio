@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', medium;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  -ms-grid-rows: 1fr 10fr 1fr;
+      grid-template-rows: 1fr 10fr 1fr;
+}
+
+#particles-js {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 1 / 1 / 4 / 4;
+  background-color: #181417;
+  height: 100vh;
+}
+
+#logo {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .75fr 1fr .75fr;
+      grid-template-columns: .75fr 1fr .75fr;
+  -ms-grid-rows: 2fr 2px .75fr 2px .5fr 2fr;
+      grid-template-rows: 2fr 2px .75fr 2px .5fr 2fr;
+}
+
+#logo .name {
+  z-index: 1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 2 / 4 / 3;
+  font-size: 4vh;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+#logo #line-top {
+  z-index: 1;
+  background-color: white;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+#logo #line-bot {
+  z-index: 1;
+  background-color: white;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+#icons {
+  z-index: 1;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 5 / 2 / 6 / 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-size: 4vh;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+}
+
+#icons a {
+  color: white;
+}
+
+#icons a {
+  color: white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-transition: -webkit-box-pack 1s;
+  transition: -webkit-box-pack 1s;
+  transition: justify-content 1s;
+  transition: justify-content 1s, -webkit-box-pack 1s, -ms-flex-pack 1s;
+  font-size: 4vh;
+}
+
+#icons a p {
+  font-size: 0vh;
+  -webkit-transition: font-size 1s;
+  transition: font-size 1s;
+}
+
+#icons a:hover {
+  font-size: 2.5vh;
+  color: #63d1c4;
+  -webkit-animation: icons 0.5s ease;
+          animation: icons 0.5s ease;
+}
+
+#icons a:hover p {
+  -webkit-animation: texts 0.5s ease;
+          animation: texts 0.5s ease;
+  font-size: 2.5vh;
+}
+
+@-webkit-keyframes texts {
+  0% {
+    font-size: 0vh;
+  }
+  75% {
+    font-size: 0vh;
+  }
+  to {
+    font-size: 2.5vh;
+  }
+}
+
+@keyframes texts {
+  0% {
+    font-size: 0vh;
+  }
+  75% {
+    font-size: 0vh;
+  }
+  to {
+    font-size: 2.5vh;
+  }
+}
+
+@-webkit-keyframes icons {
+  0% {
+    font-size: 4vh;
+    opacity: 1;
+  }
+  75% {
+    font-size: 1vh;
+    opacity: 0;
+  }
+  to {
+    font-size: 2.5vh;
+    opacity: 1;
+  }
+}
+
+@keyframes icons {
+  0% {
+    font-size: 4vh;
+    opacity: 1;
+  }
+  75% {
+    font-size: 1vh;
+    opacity: 0;
+  }
+  to {
+    font-size: 2.5vh;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  #logo {
+    -ms-grid-columns: .25fr 1fr .25fr;
+        grid-template-columns: .25fr 1fr .25fr;
+    -ms-grid-rows: 2fr 2px .75fr 2px .5fr 2fr;
+        grid-template-rows: 2fr 2px .75fr 2px .5fr 2fr;
+  }
+}
+
+@media (min-width: 1080px) {
+  #logo .name {
+    font-size: 5vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */
